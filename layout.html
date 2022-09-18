@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link rel="stylesheet" href="./stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <div class="d-flex">
+    <aside class="border-end sidebar vh-100 d-flex flex-column">
+      <!-- 後台名稱 -->
+      <h5 class="p-3"><strong>六角西餐廳</strong> - 後台管理</h5>
+      <!--選單 -->
+      <div class="overflow-auto">
+        <ul class="list-unstyled">
+          <li><a class="sidebar-link" href="./index.html"><i class="bi bi-house-fill pe-3"></i>首頁</a></li>
+          <li><a class="d-flex align-items-center justify-content-between sidebar-link" href="#collapse-orders" data-bs-toggle="collapse">
+            <div><i class="bi bi-border-width pe-3"></i><span>訂單管理</span></div>
+               <i class="bi bi-arrow-down-circle me-5"></i></a></li>
+              <ul class="list-unstyled collapse" id="collapse-orders">
+                <li><a class="sidebar-link ps-5" href="./orders.html">首頁</a></li>
+                <li><a class="sidebar-link ps-5" href="./order-detail.html">單一訂單細節</a></li>
+              </ul>
+          <li><a class="sidebar-link" href="#"><i class="bi bi-link-45deg pe-3"></i>參考連結</a></li>
+          <li><a class="sidebar-link" href="#"><i class="bi bi-link-45deg pe-3"></i>參考連結</a></li>
+          <li><a class="sidebar-link" href="#"><i class="bi bi-link-45deg pe-3"></i>參考連結</a></li>
+        </ul>
+      </div>
+      <!-- 登出 -->
+      <a class="sidebar-link"><i class="bi bi-box-arrow-left pe-3"></i>登出</a>
+    </aside>
+    <main class="main">
+      <div class="bg-white border-bottom w-100 sticky-top">
+        <a class="border-end px-3 py-2 d-inline-block " href="#" id="btn-toggle"><i class="bi bi-arrows-angle-expand"></i></a>
+      </div>
+     <!-- 主要內容 -->
+     <div class="container my-3">
+     </div>
+
+    </main>
+  </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<script src="./all.js"></script>
+</html>
