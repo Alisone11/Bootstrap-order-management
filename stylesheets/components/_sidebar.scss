@@ -32,7 +32,7 @@ $sidebar-width: 250px;
         margin-left: 0;
     }
     .main{
-        width: calc(100vw - #{$sidebar-width});
+        width: calc(100% - #{$sidebar-width});
         margin-left: $sidebar-width;
     }
 }

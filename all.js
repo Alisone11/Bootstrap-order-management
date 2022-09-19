@@ -5,15 +5,6 @@ menuBtnToggle.addEventListener('click', (e) => {
     e.preventDefault();
     body.classList.toggle('sidebar-toggled');
 });
-
-//刪除訂單
-  const modalByDelete = document.querySelector('#deleteModal');
-  modalByDelete.addEventListener('show.bs.modal', function(e){
-    const button = e.relatedTarget;
-    const orderId = button.dataset.bsOrderId;
-    const modalText = modalByDelete.querySelector('#deleteText');
-    modalText.textContent = orderId;
-  });
 // 動態圖表
 (() => {
     const chartColors = {
@@ -103,4 +94,7 @@ menuBtnToggle.addEventListener('click', (e) => {
     const pieChart = new Chart(pieCtx, config);
     const barChart = new Chart(barCtx, barConfig);
   })();
+
+
+
 

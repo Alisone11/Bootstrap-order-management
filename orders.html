@@ -12,7 +12,7 @@
   <div class="d-flex">
     <aside class="border-end sidebar vh-100 d-flex flex-column">
       <!-- 後台名稱 -->
-      <h5 class="p-3"><strong>六角西餐廳</strong> - 後台管理</h5>
+      <h1 class="h5 p-3"><strong>六角西餐廳</strong> - 後台管理</h1>
       <!--選單 -->
       <div class="overflow-auto">
         <ul class="list-unstyled">
@@ -104,7 +104,6 @@
                                   <li><a class="dropdown-item" href="#">修改狀態</a></li>
                                   <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="ON1234567">刪除訂單</a></li>
                                 </ul>
-                                
                             </div>
                         </div>
                      </td>
@@ -171,7 +170,7 @@
               </nav>
             </div>
              <!-- Modal -->
-             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="cancel-order" aria-hidden="true">
+             <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -180,7 +179,6 @@
                     </div>
                     <div class="modal-body">
                         <p>確認刪除「<span id="deleteText"></span>」的訂單嗎？</p>
-                        
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
@@ -190,13 +188,22 @@
                 </div>
             </div>
           </div>
-     </div>
-
+        </div>
     </main>
   </div>
-    
 </body>
+<script>
+//    Modal刪除訂單
+  const modalByDelete = document.querySelector('#deleteModal');
+  modalByDelete.addEventListener('show.bs.modal', function(event){
+    const button = event.relatedTarget;
+    const orderId = button.dataset.bsOrderId;
+    const modalText = modalByDelete.querySelector('#deleteText');
+    modalText.textContent = orderId;
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 <script src="./all.js"></script>
 </html>
